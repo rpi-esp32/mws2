@@ -111,6 +111,7 @@ class HttpRequest :
                     else :
                         self._response.ReturnMethodNotAllowed()
             else :
+                print(self.IsUpgrade)
                 self._response.ReturnNotImplemented()
 
     # ------------------------------------------------------------------------
@@ -160,11 +161,15 @@ class HttpRequest :
 
     def _routeRequest(self) :
         try :
+            print('before to routeHandlerrrrr')
             if self._routeResult.Args :
                 self._routeResult.Handler(self._mws2, self, self._routeResult.Args)
             else :
                 self._routeResult.Handler(self._mws2, self)
+            print('return from routeHandlersss')
+            print(self._response._hdrSent)
             if not self._response.HeadersSent :
+                print(self._response._hdrSent)
                 self._mws2.Log( 'No response was sent from route %s.'
                                 % self._routeResult,
                                 self._mws2.WARNING )

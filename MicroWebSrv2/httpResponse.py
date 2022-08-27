@@ -321,7 +321,12 @@ class HttpResponse :
         if self._request._method != 'HEAD' :
             data += bytes(content)
         self._xasCli.AsyncSendData(data, onDataSent=self._onDataSent)
+        print(self._hdrSent)
+        print(self._request._response._hdrSent)
         self._hdrSent = True
+        self._request._response._hdrSent = self._hdrSent
+        print(self._hdrSent)
+        print(self._request._response._hdrSent)
 
     # ------------------------------------------------------------------------
 
