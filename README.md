@@ -1,3 +1,12 @@
+success with Pyto on iPhone using tethering 
+@ 172.20.10.1 or 10.121.81.26
+serving files at this directory [request.Response.ReturnFile('/private/var/mobile/Containers/Data/Application/3416EEEF-A0F7-4D0E-A802-AFD6C580C41F/Documents/www/i.html')]
+setting the rootpath at
+mws2.RootPath = '/private/var/mobile/Containers/Data/Application/3416EEEF-A0F7-4D0E-A802-AFD6C580C41F/Documents/www'
+
+also, success with working in background
+
+ 
  
 ![New microWebSrv2](/img/microWebSrv2.png "microWebSrv2")
 
